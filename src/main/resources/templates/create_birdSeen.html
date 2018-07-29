@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Birds Seen Site</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Enter/Add a bird seen</h1>
+<form action="/api/birds" method="post">
+    <label>Species Name:
+        <input type="text" name="speciesName" placeholder="Enter common species name here"/>
+    </label>
+    <label>Location Name:
+        <input type="text" name="locationSeen" placeholder="Enter where the bird was seen"/>
+    </label>
+    <label>Date Seen:
+        <input type="text" name="dateSeen" placeholder="Enter the date in yyyy-mm-dd format"/>
+    </label>
+    <button type="submit">Add bird</button>
+</form>
+
+</body>
+</html>

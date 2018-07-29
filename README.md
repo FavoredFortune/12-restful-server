@@ -28,7 +28,7 @@ and edit pages.
 <th>Action</th>
 <th>HTTP Method</th>
 <th>Url Template</th>
-<th>HTML form?</th>
+<th>HTML formMountain?</th>
 <th>CRUD</th>
 </tr>
 </thead><tbody>

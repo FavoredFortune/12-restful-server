@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Birds Seen</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Records of all Birds Seen</h1>
+
+<ul>
+    <li th:each="birdSeen : ${birds}">
+        <p>
+            <span th:text="${birdSeen.speciesName}" />  was seen at
+            <span th:text="${birdSeen.locationSeen}" />  on
+            <span th:text="${birdSeen.dateSeen}" /> .
+
+            <a th:href="'/birds/' + ${birdSeen.id} + '/edit'">
+                Change/Update bird
+            </a>
+        </p>
+    </li>
+</ul>
+
+</body>
+</html>

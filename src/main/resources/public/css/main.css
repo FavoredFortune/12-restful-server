@@ -1,0 +1,32 @@
+body {
+    background-color: forestgreen;
+    color: whitesmoke;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+h1{
+    color: bisque;
+    font-size: 2em;
+}
+
+ul{
+    background-color: beige;
+    color: forestgreen;
+    padding: 10px;
+    border: solid whitesmoke 1px;
+}
+
+form{
+    background-color: beige;
+    color: saddlebrown;
+    font-size: 1em;
+}
+
+button {
+    background-color: saddlebrown;
+    color: whitesmoke;
+    padding: 1vw;
+    margin: 1vw;
+    border-radius: 3em;
+}
