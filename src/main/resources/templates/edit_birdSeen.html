@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Update Birds Seen</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Update/Change a bird seen</h1>
+    <form id="edit-form" th:action="'/api/birds' + ${id}'" method="PUT">
+        <label>Species Name:
+            <input type="text" name="speciesName" th:value="${speciesName}" />
+        </label>
+        <label>Location Name:
+            <input type="text" name="locationSeen" th:value="${locationSeen}" />
+        </label>
+        <label>Date Seen:
+            <input type="text" name="dateSeen" th:value="${dateSeen}" />
+        </label>
+        <button id="update-bird" type="submit" value="save">Save changes to bird seen?</button>
+        <button id="remove-bird">Remove bird?</button>
+    </form>
+
+    <script src="/js/form.js"></script>
+
+</body>
+</html>
