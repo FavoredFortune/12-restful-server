@@ -46,6 +46,7 @@ public class BirdSeenHTML {
         model.addAttribute("locationSeen", bird.locationSeen);
         model.addAttribute("dateSeen", bird.dateSeen);
 
+        System.out.println("TWEET TWEET");
         return "edit_birdSeen";
     }
 }
