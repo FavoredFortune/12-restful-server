@@ -18,10 +18,10 @@ import java.util.List;
 public class BirdSeenAPI {
 
     //create
-    @PostMapping
+    @PostMapping("/new")
     @ResponseBody
     public ModelAndView createBirdSeen(
-            @RequestParam("speciesName") String speciesName, @RequestParam("locationSeen") String locationSeen, @RequestParam("id") String dateSeen)
+            @RequestParam("speciesName") String speciesName, @RequestParam("locationSeen") String locationSeen, @RequestParam("dateSeen") String dateSeen)
     {
         BirdSeen birdSeen = new BirdSeen(speciesName, locationSeen,dateSeen);
         BirdsStorage.birds.put(birdSeen.id, birdSeen);
@@ -57,7 +57,7 @@ public class BirdSeenAPI {
     }
 
     //update
-    @PutMapping("/{id}")
+    @PutMapping("/{id}/edit")
     @ResponseBody
     public BirdSeen updateBirdSeen(
             @PathVariable("id") int id,

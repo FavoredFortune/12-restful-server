@@ -24,8 +24,9 @@ form{
 }
 
 button {
-    background-color: saddlebrown;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: forestgreen;
+    font-size: 1em;
     padding: 1vw;
     margin: 1vw;
     border-radius: 3em;
