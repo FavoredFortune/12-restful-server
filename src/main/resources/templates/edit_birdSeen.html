@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Update/Change a bird seen</h1>
-    <form id="edit-form" th:action="'/api/birds' + ${id}'" method="PUT">
+    <form id="edit-form" th:action="'/api/birds' + ${id}" method="PUT">
         <label>Species Name:
             <input type="text" name="speciesName" th:value="${speciesName}" />
         </label>
