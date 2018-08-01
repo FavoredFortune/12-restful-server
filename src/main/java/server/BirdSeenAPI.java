@@ -85,14 +85,14 @@ public class BirdSeenAPI {
     @DeleteMapping("/{id}")
     @ResponseBody
     public BirdSeen deleteBirdSeen(@PathVariable("id") int id){
-        BirdSeen deletebirdSeen = BirdsStorage.birds.get(id);
+        BirdSeen birdSeen = BirdsStorage.birds.get(id);
         BirdsStorage.birds.remove(id);
 
         //user explanation of method
         System.out.println("This is an example of the delete method of CRUD and destroy method of REST");
         System.out.println("The bird seen below is now removed from storage");
 
-        return deletebirdSeen;
+        return birdSeen;
     }
 
 
