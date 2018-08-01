@@ -24,13 +24,13 @@ public class BirdSeenHTML {
 
         model.addAttribute("birds", birds);
 
-        return "all_birds";
+        return "allBirds";
     }
 
     // create/add bird HTML form
     @GetMapping("/new")
     public String createBirdSeenForm(){
-        return "create_birdSeen";
+        return "createBird";
     }
 
     // update/change bird HTML form
@@ -39,14 +39,13 @@ public class BirdSeenHTML {
             @PathVariable("id") int id,
             Model model
     ) {
-        BirdSeen bird = BirdsStorage.birds.get(id);
+        BirdSeen birdUpdate = BirdsStorage.birds.get(id);
 
-        model.addAttribute("id", bird.id);
-        model.addAttribute("speciesName", bird.speciesName);
-        model.addAttribute("locationSeen", bird.locationSeen);
-        model.addAttribute("dateSeen", bird.dateSeen);
+        model.addAttribute("speciesName", birdUpdate.speciesName);
+        model.addAttribute("locationSeen", birdUpdate.locationSeen);
+        model.addAttribute("dateSeen", birdUpdate.dateSeen);
 
         System.out.println("TWEET TWEET");
-        return "edit_birdSeen";
+        return "editBird";
     }
 }

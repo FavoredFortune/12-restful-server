@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title> Update Birds Seen</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <h1>Update/Change a bird seen</h1>
-    <form id="edit-form" th:action="'/api/birds' + ${id}" method="PUT">
+    <form id="edit-form" th:action="'/api/birds/' + ${id}" method="put" >
         <label>Species Name:
             <input type="text" name="speciesName" th:value="${speciesName}" />
         </label>
