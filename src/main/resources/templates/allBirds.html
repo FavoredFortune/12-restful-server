@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-    <h1>Records of all Birds Seen</h1>
+    <h1> Records of all Birds Seen</h1>
 
         <ul id="bird-list">
             <li th:each="birdSeen : ${birds}">
@@ -19,5 +19,6 @@
             </li>
         </ul>
     <button type="submit"> <a th:href="'birds/new/'">Add a new bird seen</a></button>
+    <script src="/js/form.js"></script>
     </body>
 </html>

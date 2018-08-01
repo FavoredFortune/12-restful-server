@@ -21,8 +21,10 @@ public class BirdSeenAPI {
     @PostMapping("/new")
     @ResponseBody
     public ModelAndView createBirdSeen(
-            @RequestParam("speciesName") String speciesName, @RequestParam("locationSeen") String locationSeen, @RequestParam("dateSeen") String dateSeen)
-    {
+            @RequestParam("speciesName") String speciesName,
+            @RequestParam("locationSeen") String locationSeen,
+            @RequestParam("dateSeen") String dateSeen) {
+
         BirdSeen birdSeen = new BirdSeen(speciesName, locationSeen,dateSeen);
         BirdsStorage.birds.put(birdSeen.id, birdSeen);
 
@@ -59,10 +61,9 @@ public class BirdSeenAPI {
     //update
     @PutMapping("/{id}/edit")
     @ResponseBody
-    public BirdSeen updateBirdSeen(
+    public ModelAndView updateBirdSeen(
             @PathVariable("id") int id,
-            @RequestBody String body
-    ) {
+            @RequestBody String body) {
         Gson gson = new Gson();
         BirdSeen newBirdSeen = gson.fromJson(body, BirdSeen.class);
 
@@ -75,8 +76,9 @@ public class BirdSeenAPI {
         System.out.println("This is an example of the update method of CRUD and put method of REST");
         System.out.println("The bird you've entered has been added to storage." +
                 "as noted below");
+        BirdsStorage.birds.put(birdSeen.id, birdSeen);
 
-        return birdSeen;
+        return new ModelAndView( "redirect:/birds");
     }
 
     //destroy

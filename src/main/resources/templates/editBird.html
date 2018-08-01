@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title> Update Birds Seen</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <h1>Update/Change a bird seen</h1>
-    <form id="edit-form" th:action="'/api/birds' + ${id}'" method="PUT">
+    <form id="edit-form" th:action="'/api/birds/' + ${id}" method="PUT" >
+
         <label>Species Name:
             <input type="text" name="speciesName" th:value="${speciesName}" />
         </label>
@@ -17,8 +18,8 @@
         <label>Date Seen:
             <input type="text" name="dateSeen" th:value="${dateSeen}" />
         </label>
-        <button id="update-bird" type="submit" value="save">Save changes to bird seen?</button>
-        <button id="remove-bird" type="submit" value="remove">Remove bird?</button>
+        <button id="update-bird" type="submit" value="save">Save changes to bird seen</button>
+        <button id="deleteBird" type="submit" value="remove">Remove bird</button>
     </form>
 
     <script src="/js/form.js"></script>
